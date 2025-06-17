@@ -87,11 +87,20 @@
 
         public function getValorTotal(): float{ 
             
-            #$retorno = float;
+            $quantidade = $this->getQuantidade();
+            $valorUn = $this->getValorUnitario();
+            $valorTotal = $quantidade * $valorUn;
+            return $valorTotal;
         }
         
         public function descProduto(): string{
-            return "$this->getDescricao ($this->getUnidadeMedida) | $this->getQuantidade x $this->valorUnitario = $this->getValorTotal";
+            $desc = $this->getDescricao();
+            $UM = $this->getUnidadeMedida();
+            $quantidade = $this->getQuantidade();
+            $valorUn = $this->getValorUnitario();
+            $valorTot = $this->getValorTotal();
+
+            return "$desc ($UM) | $quantidade x $valorUn = $valorTot";
         }
     }
     
@@ -112,3 +121,16 @@
                 break;
         }
     }
+
+    echo $produto1->descProduto();
+    echo $produto2->descProduto();
+    echo $produto2->descProduto();
+
+    $produtos = [$produto1, $produto2, $produto3];
+    $produtoMaiorValor = $produtos[0];
+    foreach ($produtos as $produto) {
+        if ($produto->getValorTotal() > $produtoMaiorValor->getValorTotal()) {
+            $produtoMaiorValor = $produto;
+        }
+    }
+    echo "Produto vendido com o maior valor total: " . $produtoMaiorValor->getDescricao() . " (" . $produtoMaiorValor->getUnidadeMedida() . ")\n";
