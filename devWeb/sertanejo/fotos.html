@@ -10,24 +10,94 @@
         </style>
     </head>
     <body>
-        <hgroup>
-            <!--banner, logo-->
-            <img src="">
-            <header>
-                <!--Titulo-->
-            </header>
-            <nav>
-            <!--links das outras paginas-->
-            <ul>
-                <li><a href="balde">link1</a></li>
-            </ul>
+        <header>
+            <!-- Banner e logo -->
+            <img src="banner.png" class="banner" id="banner" alt="Banner da dupla sertaneja">
+            <img src="logo.png" class="logo" id="logo" alt="Logo da dupla sertaneja">
+            
+            <!-- Titu e chamada p acao -->
+            <div class="header-content">
+                <h1>Frase curta sobre o que somos e por que você deveria escutar nossa música</h1>
+                <p class="cta">Frase mais curta ainda, chamada para ação</p>
+                <img src="fotoNos.png" id="imagem-header" alt="Foto da dupla">
+            </div>
+
+            <!-- Menu -->
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="paginaHome">Início</a></li>
+                    <li><a href="paginaSobre">Sobre Nós</a></li>
+                    <li><a href="paginaDiscografia">Discografia</a></li>
+                    <li><a href="paginaAgenda">Agenda</a></li>
+                    <li><a href="paginaGaleria">Galeria</a></li>
+                    <li><a href="paginaContatos">Contato</a></li>
+                </ul>
             </nav>
-        </hgroup>
+        </header>
         <main>
+            <h1>Memorias</h1>
+            <section>
+                <table>
+                    <tbody>
+                        <h2>Evento 1</h2>
+                        <img src="imagem1Evento1">
+                        <img src="imagem2Evento1">
+                        <img src="imagem3Evetno1">
+                        <img src="imagem4Evetno1">
+                    </tbody>
+                    <tbody>
+                        <h2>Evento 2</h2>
+                        <img src="imagem1Evento1">
+                        <img src="imagem2Evento1">
+                        <img src="imagem3Evetno1">
+                        <img src="imagem4Evetno1">
+                    </tbody>
+                    <tbody>
+                        <h2>Evento 3</h2>
+                        <img src="imagem1Evento1">
+                        <img src="imagem2Evento1">
+                        <img src="imagem3Evetno1">
+                        <img src="imagem4Evetno1">
+                    </tbody>
+                    <tbody>
+                        <h2>Evento 4</h2>
+                        <img src="imagem1Evento1">
+                        <img src="imagem2Evento1">
+                        <img src="imagem3Evetno1">
+                        <img src="imagem4Evetno1">
+                    </tbody>
+                </table>
+            </section>
 
         </main>
-        <footer>
-            <!--Infos de ctt, creditos-->
+        <footer class="rodape">
+            <div class="container">
+                <div class="rodape-coluna">
+                    <div class="rodape-logo">
+                        <img src="logo.png" alt="Logo da dupla">
+                    </div>
+                    <div class="rodape-redes">
+                        <a href="linkInstagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="linkLinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="linkFacebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="linkYoutube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    <address>
+                        <p><strong>NOME DA DUPLA SERTANEJA</strong></p>
+                        <p>Contato: <a href="tel:00000000000">(00) 00000-0000</a></p>
+                        <p><a href="mailto:emailDupla@gmail.com">emailDupla@gmail.com</a></p>
+                    </address>
+                </div>
+                
+                <div class="rodape-coluna voltar-topo">
+                    <a href="#top" class="newsletter-btn">Voltar ao topo ↑</a>
+                </div>
+                
+                <div class="direitos">
+                    <p>Implementado por <a href="githubAaa">aaa</a>, <a href="githubRrrrrr">rrrrrr</a>, e <a href="githubFfffffff">ffffffff</a></p>
+                    <p>&copy; <span id="year"></span> [Nome da Dupla]. Todos os direitos reservados.</p>
+                </div>
+            </div>
         </footer>
         <script>
             
