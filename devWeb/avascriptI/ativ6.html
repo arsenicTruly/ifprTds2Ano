@@ -1,0 +1,19 @@
+<button id="gerar">Gerar Nome</button>
+<p id="resultado"></p>
+
+<script>
+  const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+  const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+  const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+  const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+  document.getElementById('gerar').addEventListener('click', () => {
+    const titulo = titles[Math.floor(Math.random() * titles.length)];
+    const nome = names[Math.floor(Math.random() * names.length)];
+    const classe = classes[Math.floor(Math.random() * classes.length)];
+    const local = locations[Math.floor(Math.random() * locations.length)];
+
+    document.getElementById('resultado').textContent = 
+      `${titulo} ${nome}, o ${classe} de ${local}`;
+  });
+</script>

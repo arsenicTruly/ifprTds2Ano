@@ -1,0 +1,14 @@
+<input type="text" id="sabor">
+<p id="mensagem"></p>
+
+<script>
+  document.getElementById('sabor').addEventListener('input', (e) => {
+    const valor = e.target.value;
+    const msg = document.getElementById('mensagem');
+    if (valor.length > 3) {
+      if (valor === 'chocolate') msg.textContent = 'Eu amo sorvete de chocolate!';
+      else if (valor === 'flocos') msg.textContent = 'Ahh, mas chocolate é o meu favorito...';
+      else msg.textContent = 'Ahh, eu esperava um sabor de sorvete...';
+    }
+  });
+</script>

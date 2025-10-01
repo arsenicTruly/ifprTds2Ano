@@ -1,0 +1,16 @@
+<p id="contador">0</p>
+<button id="incrementar">Incrementar</button>
+<button id="zerar">Zerar</button>
+
+<script>
+  let count = 0;
+  const contador = document.getElementById('contador');
+  document.getElementById('incrementar').addEventListener('click', () => {
+    count++;
+    contador.textContent = count;
+  });
+  document.getElementById('zerar').addEventListener('click', () => {
+    count = 0;
+    contador.textContent = count;
+  });
+</script>

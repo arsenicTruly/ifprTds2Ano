@@ -1,0 +1,31 @@
+<form id="cadastro">
+  <input type="text" id="nome" placeholder="Nome">
+  <input type="email" id="email" placeholder="E-mail">
+  <input type="password" id="senha" placeholder="Senha">
+  <input type="password" id="confirmacao" placeholder="Confirmar Senha">
+  <button type="submit">Cadastrar</button>
+</form>
+<button id="mostrarSenha">Mostrar Senha</button>
+
+<script>
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%&*])(?=.*[0-9])[A-Za-z\d!@#$%&*]{8,}$/;
+
+  document.getElementById('cadastro').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const confirmacao = document.getElementById('confirmacao').value;
+
+    if (nome.length < 3) alert('Nome deve ter pelo menos 3 caracteres.');
+    if (!emailRegex.test(email)) alert('E-mail inválido.');
+    if (!senhaRegex.test(senha)) alert('Senha fraca.');
+    if (senha !== confirmacao) alert('Senhas não coincidem.');
+  });
+
+  document.getElementById('mostrarSenha').addEventListener('click', () => {
+    const senha = document.getElementById('senha');
+    senha.type = senha.type === 'password' ? 'text' : 'password';
+  });
+</script>

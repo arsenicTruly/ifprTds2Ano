@@ -1,0 +1,12 @@
+<ul id="minhaLista"></ul>
+<button id="adicionar">Adicionar Item</button>
+
+<script>
+  let numero = 1;
+  document.getElementById('adicionar').addEventListener('click', () => {
+    const novoItem = document.createElement('li');
+    novoItem.textContent = `Item n° ${numero}`;
+    document.getElementById('minhaLista').appendChild(novoItem);
+    numero++;
+  });
+</script>

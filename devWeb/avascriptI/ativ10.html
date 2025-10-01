@@ -1,0 +1,18 @@
+<img id="slide" src="https://picsum.photos/id/237/600/400">
+
+<script>
+  const imagens = [
+    "https://picsum.photos/id/237/600/400",
+    "https://picsum.photos/id/238/600/400",
+    "https://picsum.photos/id/239/600/400",
+    "https://picsum.photos/id/240/600/400"
+  ];
+  let indice = 0;
+
+  function trocarImagem() {
+    document.getElementById('slide').src = imagens[indice];
+    indice = (indice + 1) % imagens.length;
+    setTimeout(trocarImagem, 5000);
+  }
+  trocarImagem();
+</script>
